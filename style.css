@@ -1,19 +1,12 @@
-.heading
-{
-    font-size: 23px;
-    width: 80%;
-    margin: 0px;
-    box-shadow: 5px 5px 5px grey;
-}
-
 .heading_div
 {
     float: none;
-    background: white;
+    background: orange;
     padding: 10px;
     border-radius: 20px;
-    color: black;
+    color: white;
     box-shadow: 5px 5px 5px grey;
+    margin-top: 10px;
 }
 
 .heading_div2
@@ -42,6 +35,35 @@ canvas
 {
     border: 5px solid white;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px grey;
-    margin-top: 150px;
+    margin-top: 100px;
+    animation: myAnimation 4s linear infinite;
+}
+
+@keyframes myAnimation
+{
+    from {box-shadow: 5px 5px 5px red}
+    to {box-shadow: 5px 5px 5px blue;}
+}
+
+.color {
+    font-weight: 700;
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+    background: -webkit-linear-gradient(right, red 20%, blue 40%, blue 60%, red 80%);
+    background: -o-linear-gradient(right, red 20%, blue 40%, blue 60%, red 80%);
+    background: -moz-linear-gradient(right, red 20%, blue 40%, blue 60%, red 80%);
+    background: linear-gradient(right, red 20%, blue 40%, blue 60%, red 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    -webkit-animation: ani 4s linear infinite;
+    animation: ani 4s linear infinite;
+    cursor: default;
+}
+
+@-webkit-keyframes ani {
+    to {
+        background-position: 200% center;
+    }
 }
